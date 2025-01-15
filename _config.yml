@@ -23,9 +23,8 @@ email: leonlong2004@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is an awesome site that involves countless exciting creative ideas that you cannot miss out on.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "leonlong.space" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  namerror
-
 # Build settings
 theme: minima
 plugins:
@@ -36,9 +35,16 @@ defaults:
   - scope:
       path: "_posts"
     values:
-      layout: post
-      title: "My Title"
+      layout: blog_post
       permalink: /blog/:categories/:year/:month/:day/:title
+  - scope:
+      path: "projects"
+    values:
+      permalink: /project/:categories/:title
+  - scope:
+      path: "assets/img"
+    values:
+      image: true # To search for images you can use the attribute to see {% if image.image %} when looping in {% for image in site.staticfiles %}
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
