@@ -31,6 +31,11 @@ plugins:
   - jekyll-feed
   - ./_plugins/category_generator.rb
 
+collections:
+  projects:
+    output: true
+    permalink: /project/:categories/:title
+
 # Default front matter
 defaults:
   - scope:
