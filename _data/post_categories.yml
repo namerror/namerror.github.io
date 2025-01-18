@@ -1,0 +1,20 @@
+# keeps track of the categories and subcategories of the posts
+
+- category: personal
+  url: /blog/personal/
+  subcategories:
+    - category: announcement
+      url: /blog/personal/announcement/
+
+- category: jekyll
+  url: /blog/jekyll/
+  subcategories:
+    - category: update
+      url: /blog/jekyll/update/
+# - category: tech
+#   url: /blog/tech/
+#   subcategories:
+#     - category: programming
+#       url: /blog/tech/programming/
+#     - category: robotics
+#       url: /blog/tech/robotics/

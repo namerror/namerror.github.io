@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<style>
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-start;
+      padding: 2px;
+    }
+    
+    .category-box {
+      border-radius: 10px;
+      
+      padding: 4px;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      background-color: #e9e8e8;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.169);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .category-box:hover {
+      cursor: pointer;
+      text-decoration: none;
+      transform: scale(1.01);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.338);
+    }
+</style>
+<h2>{% if page.parent %}<a href="{{ page.parent.url }}">{{ page.parent.category | capitalize }}</a>/{% endif %}{{ page.title }}</h2>
+{% if page.subcategories.size > 0 %}
+    <p>Categories under {{ page.title }}:</p>
+    <div class="category-container">
+        {% for subcategory in page.subcategories %}
+            <a href="{{ subcategory.url }}" class="category-box">{{ subcategory.category | capitalize }}</a>
+        {% endfor %}
+    </div>
+{% endif %}
+<br>
+<hr>
+<h3 class="post-list-heading">Posts in "{{ page.title }}"</h3>
+<ul class="post-list">
+    {% for post in site.posts %}
+        {% if post.url contains page.url %} <!-- This line filters posts by category, following the exact hierarchy -->
+            <li>
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <span class="post-meta">{{ post.date | date: date_format }}</span>
+                <a href="{{ post.url }}" class="post-link">{{ post.title | escape }}</a>
+                {% if site.show_excerpts %}
+                    {{ post.excerpt }}
+                {% endif %}
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>

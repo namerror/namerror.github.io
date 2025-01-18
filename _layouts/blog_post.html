@@ -29,8 +29,14 @@ layout: post
 }
 </style>
 <div class="category-container">
-{% for category in page.categories %}
-    <a class="category-box">
+{% assign categories = page.categories %}
+{% assign category_path = "" %}
+{% for category in categories %}
+    {% if forloop.index > 1 %}
+      /
+    {% endif %}
+    {% assign category_path = category_path | append: "/" | append: category | downcase | replace: " ", "-" %}
+    <a class="category-box" href="{{ site.baseurl }}/blog{{ category_path }}">
         {{category}}
     </a>
 {% endfor %}
