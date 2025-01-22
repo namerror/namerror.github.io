@@ -11,6 +11,19 @@
   subcategories:
     - category: update
       url: /blog/jekyll/update/
+
+- category: tech
+  url: /blog/tech/
+  subcategories:
+    # - category: programming
+    #   url: /blog/tech/programming/
+    # - category: robotics
+    #   url: /blog/tech/robotics/
+    - category: cybersecurity
+      url: /blog/tech/cybersecurity/
+      subcategories:
+        - category: notes
+          url: /blog/tech/cybersecurity/notes/
 # - category: tech
 #   url: /blog/tech/
 #   subcategories:
