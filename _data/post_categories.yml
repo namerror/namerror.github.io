@@ -15,8 +15,11 @@
 - category: tech
   url: /blog/tech/
   subcategories:
-    # - category: programming
-    #   url: /blog/tech/programming/
+    - category: programming
+      url: /blog/tech/programming/
+      subcategories:
+        - category: python
+          url: /blog/tech/programming/python/
     # - category: robotics
     #   url: /blog/tech/robotics/
     - category: cybersecurity
