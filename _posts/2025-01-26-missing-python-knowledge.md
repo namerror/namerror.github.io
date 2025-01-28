@@ -13,7 +13,7 @@ I am starting a new column called *Python: the Missing Bits of University Lectur
 
 This includes:
 
- - [ ] String processing
+ - [x] String processing
  - [ ] Pattern matching and regex
  - [ ] Read/Write
  - [ ] Web scraping

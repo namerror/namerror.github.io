@@ -3,7 +3,7 @@ title: "Cybersecurity Learning Path"
 date: 2025-01-22
 categories: tech cybersecurity notes
 ---
-# Learning Path for Cybersecurity
+## ***Learning Path for Cybersecurity***
 I'm planning to start learning cybersecurity. Below is a learning path I found on the internet. I will try following it:
 ## Level 1 - Intro  
 - [ ] OpenVPN [https://tryhackme.com/room/openvpn](https://tryhackme.com/room/openvpn)  
