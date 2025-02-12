@@ -27,6 +27,8 @@
       subcategories:
         - category: notes
           url: /blog/tech/cybersecurity/notes/
+    - category: hardware
+      url: /blog/tech/hardware/
 # - category: tech
 #   url: /blog/tech/
 #   subcategories:

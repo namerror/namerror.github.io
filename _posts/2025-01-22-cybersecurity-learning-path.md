@@ -14,7 +14,8 @@ I'm planning to start learning cybersecurity. Below is a learning path I found o
 Introductory CTFs to get your feet wet  
 - [ ] Google Dorking [https://tryhackme.com/room/googledorking](https://tryhackme.com/room/googledorking)  
 - [ ] OHsint [https://tryhackme.com/room/ohsint](https://tryhackme.com/room/ohsint)  
-- [ ] Shodan.io [https://tryhackme.com/room/shodan](https://tryhackme.com/room/shodan)  
+- [ ] Shodan.io [https://tryhackme.com/room/shodan](https://tryhackme.com/room/shodan)
+
 ## Level 2 - Tooling  
 - [ ] Tmux [https://tryhackme.com/room/rptmux](https://tryhackme.com/room/rptmux)  
 - [ ] Nmap [https://tryhackme.com/room/rpnmap](https://tryhackme.com/room/rpnmap)  
@@ -28,14 +29,16 @@ More introductory CTFs
 - [ ] Vulnversity - [https://tryhackme.com/room/vulnversity](https://tryhackme.com/room/vulnversity)  
 - [ ] Blue - [https://tryhackme.com/room/blue](https://tryhackme.com/room/blue)  
 - [ ] Simple CTF [https://tryhackme.com/room/easyctf](https://tryhackme.com/room/easyctf)  
-- [ ] Bounty Hacker [https://tryhackme.com/room/cowboyhacker](https://tryhackme.com/room/cowboyhacker)  
+- [ ] Bounty Hacker [https://tryhackme.com/room/cowboyhacker](https://tryhackme.com/room/cowboyhacker)
+
 ## Level 3 - Crypto & Hashes with CTF practice  
 - [ ] Crack the hash [https://tryhackme.com/room/crackthehash](https://tryhackme.com/room/crackthehash)  
 - [ ] Agent Sudo [https://tryhackme.com/room/agentsudoctf](https://tryhackme.com/room/agentsudoctf)  
 - [ ] The Cod Caper [https://tryhackme.com/room/thecodcaper](https://tryhackme.com/room/thecodcaper)  
 - [ ] Ice [https://tryhackme.com/room/ice](https://tryhackme.com/room/ice)  
 - [ ] Lazy Admin [https://tryhackme.com/room/lazyadmin](https://tryhackme.com/room/lazyadmin)  
-- [ ] Basic Pentesting [https://tryhackme.com/room/basicpentestingjt](https://tryhackme.com/room/basicpentestingjt)  
+- [ ] Basic Pentesting [https://tryhackme.com/room/basicpentestingjt](https://tryhackme.com/room/basicpentestingjt) 
+
 ## Level 4 - Web  
 - [ ] OWASP top 10 [https://tryhackme.com/room/owasptop10](https://tryhackme.com/room/owasptop10)  
 - [ ] Inclusion [https://tryhackme.com/room/inclusion](https://tryhackme.com/room/inclusion)  
@@ -49,6 +52,7 @@ More introductory CTFs
 - [ ] DevelPy [https://tryhackme.com/room/bsidesgtdevelpy](https://tryhackme.com/room/bsidesgtdevelpy)  
 - [ ] Jack of all trades [https://tryhackme.com/room/jackofalltrades](https://tryhackme.com/room/jackofalltrades)  
 - [ ] Bolt [https://tryhackme.com/room/bolt](https://tryhackme.com/room/bolt)  
+
 ## Level 5 - Reverse Engineering  
 - [ ] Intro to x86 64 [https://tryhackme.com/room/introtox8664](https://tryhackme.com/room/introtox8664)  
 - [ ] CC Ghidra [https://tryhackme.com/room/ccghidra](https://tryhackme.com/room/ccghidra)  
@@ -56,7 +60,8 @@ More introductory CTFs
 - [ ] CC Steganography [https://tryhackme.com/room/ccstego](https://tryhackme.com/room/ccstego)  
 - [ ] Reverse Engineering [https://tryhackme.com/room/reverseengineering](https://tryhackme.com/room/reverseengineering)  
 - [ ] Reversing ELF [https://tryhackme.com/room/reverselfiles](https://tryhackme.com/room/reverselfiles)  
-- [ ] Dumping Router Firmware [https://tryhackme.com/room/rfirmware](https://tryhackme.com/room/rfirmware)  
+- [ ] Dumping Router Firmware [https://tryhackme.com/room/rfirmware](https://tryhackme.com/room/rfirmware)
+  
 ## Level 6 - PrivEsc  
 - [ ] Sudo Security Bypass [https://tryhackme.com/room/sudovulnsbypass](https://tryhackme.com/room/sudovulnsbypass)  
 - [ ] Sudo Buffer Overflow [https://tryhackme.com/room/sudovulnsbof](https://tryhackme.com/room/sudovulnsbof)  
@@ -68,6 +73,7 @@ More introductory CTFs
 - [ ] Kenobi [https://tryhackme.com/room/kenobi](https://tryhackme.com/room/kenobi)  
 - [ ] Capture the flag [https://tryhackme.com/room/c4ptur3th3fl4g](https://tryhackme.com/room/c4ptur3th3fl4g)  
 - [ ] Pickle Rick [https://tryhackme.com/room/picklerick](https://tryhackme.com/room/picklerick)  
+
 ## Level 7 - CTF practice  
 - [ ] Post Exploitation Basics [https://tryhackme.com/room/postexploit](https://tryhackme.com/room/postexploit)  
 - [ ] Smag Grotto [https://tryhackme.com/room/smaggrotto](https://tryhackme.com/room/smaggrotto)  
