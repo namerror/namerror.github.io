@@ -3,7 +3,7 @@ title: "Learning Hardware with KIM-1"
 date: 2025-02-11
 categories: tech hardware
 ---
-This post will probably highly unorganized and probably hard to read because I'm only sharing notes and thoughts for myself, putting down whatever I'm thinking.
+This post will probably be highly unorganized and probably hard to read because I'm only sharing notes and thoughts for myself, putting down whatever I'm thinking.
 ## Background
 It's always been a shame, a flaw, that my university decided to isolate the College of Computer Science, while putting Electrical and Computer Engineering in another college, so that CS kids are restricted from touching circuits and electronics, while engineers don't get to learn algorithms. Recently I snuck into a hardware class at my uni's ECE department, and I am even more annoyed by this problem. Anyways, we are currently learning hands-on hardware programming and circuit building with the 6502 microprocessor using the KIM-1 (Keyboard Input Monitor). 
 
