@@ -20,7 +20,8 @@ Materials used:
 - ...
 
 ## Progress Update
-# ***02-11-2025 update***
+# Lab 2
+#### ***02-11-2025 update***
 So far, I've read through and finished Lab 0 and Lab 1 in the Blue Book. Today I started with Lab 2. I've built the circuit for simple input with 8 switches representing 8 bits.
 ![circuit image]({{site.base_url}}/assets/img/circuitKIM1.png)
 
@@ -28,7 +29,7 @@ This is how it looks IRL:
 
 ![setup image]({{site.base_url}}/assets/img/setupCircuit.png)
 
-# ***02-16-2025 update***
+#### ***02-16-2025 update***
 
 I learned how to use flags to achieve logical branch, thus creating a loop for the program.
 For example, below is a program that returns controll to the monitor when switch 6 is closed (see circuit image above):
@@ -64,3 +65,48 @@ However, I ran into some unexpected problems when trying to do PROBELM 2-9 in th
 > As you can see, it loads from $40 and performs AND with $1700 using **BIT** which results in the overflow (bit 6) flag V=0 when switch 6 is closed, hence breaking the loop.
 
 However, it is weird that when I load $1700 first, and **BIT** that with $40, the program never breaks from the loop. The problem now still remains unresolved, I've been troubled by that for a long time... Anyways, at least I have one version that works.
+
+#### ***02-17-2025 update***
+
+Just finished Lab 2. Below are some example programs
+
+    0200	AD	LDA
+    0201	00
+    0202	17
+    0203	C9	CMP
+    0204	DB
+    0205	D0	BNE
+    0206	F9
+    0207	AD	LDA
+    0208	00
+    0209	17
+    020A	C9	CMP
+    020B	7E
+    020C	D0	BNE
+    020D	F9
+    020E	00	BRK
+
+> This program waits for swiches 2 and 5 to be closed at the same time and then for switches 0 and 7 to be closed at the same time.
+> The way it works is using ***CMP*** (compare), instead of comparing by bit, this operation compares by a whole byte (the hexadecimal), therefore it would only return 0 if the exact switches are closed.
+
+Here is a program (longest program in Lab 2) that waits for either switch 2 to be closed followed by switch 5 or switch 5 followed by switch 2, only one at a time
+
+    0200	AD	LDA
+    0201	00
+    0202	17
+    0203	C9	CMP
+    0204	DF
+    0205	F0	BEQ
+    0206	04
+    0207	C9	CMP
+    0208	FB
+    0209	D0	BNE
+    020A	F5
+    020B	AD	LDA
+    020C	00
+    020D	17
+    020E	C9	CMP
+    020F	DB
+    0210	D0	BNE
+    0211	EE
+    0212	00	BRK
