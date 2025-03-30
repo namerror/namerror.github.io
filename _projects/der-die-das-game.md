@@ -2,7 +2,7 @@
 layout: project
 title: "[Project] Learn Der Die Das (German articles)"
 categories: software web
-tags: Web JavaScript Python Scraping
+tags: JavaScript Python Scraping
 date: 2025-03-20
 bio: "A simple web game to help memorize the gender of German nouns."
 image: "/assets/img/derdiedas.png"
