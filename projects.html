@@ -5,15 +5,10 @@ permalink: /projects/
 ---
 <style>
     .projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 10px;
+    display: grid;
     }
   
   .project-item {
-    width: 200px;
     color: black;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -22,6 +17,7 @@ permalink: /projects/
     background-color: #fff;
     padding: 10px;
     transition: box-shadow 0.3s ease;
+    margin: 10px;
   }
 
   .project-item p {
@@ -38,16 +34,7 @@ permalink: /projects/
     width: 150px;
     height: auto;
   }
-  
-  @media (max-width: 450px) {
-    .project-item {
-      width: 100%;
-    }
 
-    .project-thumbnail {
-      width: 100%;
-    }
-  }
 </style>
 <h1>Projects</h1>
 <div class="projects-list">
