@@ -1,12 +1,12 @@
 ---
 layout: blog_post
 title: "[Project] KIM-1 LCD Trivia Game"
-categories: hardware
-tags: Assembly KIM-1 Microcomputer Circuits
+categories: hardware assembly KIM-1 microcomputer circuits
 date: 2025-05-06
-excerpt: "A physical Trivia Game running on the KIM-1 6502-Computer, displayed by an LCD, programmed with assembly."
-image: "/assets/img/KIM1Trivia/fullPic.jpg"
 ---
+## A physical Trivia Game running on the KIM-1 6502-Computer, displayed by an LCD, programmed with assembly.
+
+![Full Picture]({{site.base_url}}/assets/img/KIM1Trivia/fullPic.jpg)
 
 This project marks my first attempt at physical computing involving low-level programming and circuit design. The project showcases a Trivia game that is displayed on an LCD. By pressing the buttons on the keypad, the user can choose an answer to the displayed question and play the game.
 

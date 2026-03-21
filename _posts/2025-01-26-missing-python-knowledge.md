@@ -1,7 +1,7 @@
 ---
 title: "Python: the Missing Bits of University Lectures"
 date: 2025-01-26
-categories: tech programming python
+categories: programming python
 ---
 Python was the first language I learned when I started programming at twelve. I've worked on many projects with this language, and in a way I even learned this language twice: once by myself, and a second time in my college CS class. 
 

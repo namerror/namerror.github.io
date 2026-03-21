@@ -1,7 +1,7 @@
 ---
 title: "Learning Hardware with KIM-1"
 date: 2025-02-11
-categories: tech hardware
+categories: hardware assembly KIM-1 microcomputer circuits
 ---
 This post will probably be highly unorganized and probably hard to read because I'm only sharing notes and thoughts for myself, putting down whatever I'm thinking.
 ## Background

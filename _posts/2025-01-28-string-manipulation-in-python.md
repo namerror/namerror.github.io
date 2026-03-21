@@ -1,7 +1,7 @@
 ---
 title: "String Manipulation in Python"
 date: 2025-01-28
-categories: tech programming python
+categories: programming python
 ---
 This post is a very easy warm-up. I included some tricks for string manipulation in Python. Popular methods like replace() are **not** included here because they are too popular!
 
