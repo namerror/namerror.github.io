@@ -29,12 +29,6 @@ github_username:  namerror
 theme: minima
 plugins:
   - jekyll-feed
-  - ./_plugins/category_generator.rb
-
-collections:
-  projects:
-    output: true
-    permalink: /project/:categories/:title
 
 # Default front matter
 defaults:
@@ -42,11 +36,7 @@ defaults:
       path: "_posts"
     values:
       layout: blog_post
-      permalink: /blog/:categories/:year/:month/:day/:title
-  - scope:
-      path: "projects"
-    values:
-      permalink: /project/:categories/:title
+      permalink: /blog/:year/:month/:day/:title
   - scope:
       path: "assets/img"
     values:

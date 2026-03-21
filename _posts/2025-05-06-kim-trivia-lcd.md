@@ -1,10 +1,10 @@
 ---
-layout: project
+layout: blog_post
 title: "[Project] KIM-1 LCD Trivia Game"
-categories:  hardware
+categories: hardware
 tags: Assembly KIM-1 Microcomputer Circuits
 date: 2025-05-06
-bio: "A physical Trivia Game running on the KIM-1 6502-Computer, displayed by an LCD, programmed with assembly."
+excerpt: "A physical Trivia Game running on the KIM-1 6502-Computer, displayed by an LCD, programmed with assembly."
 image: "/assets/img/KIM1Trivia/fullPic.jpg"
 ---
 
@@ -25,4 +25,3 @@ Materials used for this project:
 
 SPI is used for data transmission between the LCD and KIM-1. The schematics are shown below
 ![Schematics]({{site.base_url}}/assets/img/KIM1Trivia/schematics.jpg)
-
