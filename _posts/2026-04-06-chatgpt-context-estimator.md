@@ -38,4 +38,4 @@ I looked through many official and unofficial sources, and the total context win
 - Support for token estimation of different output formats (e.g. markdown, code blocks, etc.)
 
 ### Welcoming Feedback and Contributions!
-I hope you find this interesting, and please feel free to critique and share your thoughts! The project is open source, and you're welcome to check out the code and contribute! [GitHub Repo](https://github.com/namerror/countcontext)
+I hope you find this interesting, and please feel free to critique and share your thoughts! The project is open source, and you're welcome to check out the code and contribute! [GitHub Repo](https://github.com/namerror/context-estimator)
