@@ -14,7 +14,11 @@ As a proof-of-concept prototype, it works just fine for simple mazes, but locali
 For anyone interested in the details, check out the github repo where I have documented the design, components, and code: [GitHub Repo](https://github.com/namerror/2DMappingBot)
 
 ## Quick Demo
+
 ![Demo]({{site.base_url}}/assets/img/2dslam/demo.gif)
+
 ![Front]({{site.base_url}}/assets/img/2dslam/robot_front.jpg)
+
 ![Top]({{site.base_url}}/assets/img/2dslam/robot_top.jpg)
+
 ![Action]({{site.base_url}}/assets/img/2dslam/robot_in_action.png)
