@@ -29,6 +29,10 @@ RViz was useful for inspecting the structure and frames. Gazebo was the next tes
 
 That ordering made debugging more manageable. If spawning failed, I could investigate model loading and geometry without also wondering whether a controller had activated.
 
+![Differential-drive base with its box body and two wheels in RViz]({{ '/assets/img/robot-starter/rviz-model.png' | relative_url }})
+
+*Newly captured RViz view of the August 11 model, reconstructed from its saved revision. Joint-state publication supplies wheel transforms; this view demonstrates the model, not physical driving.*
+
 ## Spinning a wheel in RViz is a different milestone
 
 One distinction I wrote down was the relationship between joint states and movement.
@@ -72,7 +76,7 @@ diff_drive_controller:
     odom_frame_id: odom
 ```
 
-This is an excerpt, rather than a complete controller configuration. The [migration commit](https://github.com/namerror/Robot-starter/commit/97368c9a8e221797bb15e0e1f4020c7b6039a72c) contains the model interfaces, controller configuration, and launch changes together.
+This is an excerpt, rather than a complete controller configuration. The migration brought together the model interfaces, controller configuration, and launch changes.
 
 I kept the initial Gazebo path available while validating the new one. That meant I had a known working comparison instead of replacing every moving part at once.
 
@@ -97,4 +101,4 @@ That working simulation was the foundation for the next question: could I take t
 
 ---
 
-[Project source and learning roadmap](https://github.com/namerror/Robot-starter) · **Part 1** · [Part 2]({% post_url 2026-08-23-robotics-wheel-odometry %}) · [Part 3]({% post_url 2026-10-05-robotics-ekf-sensor-fusion %}) · [Part 4]({% post_url 2026-10-22-robotics-lidar-slam-nav2 %})
+**Part 1** · [Part 2]({% post_url 2026-08-23-robotics-wheel-odometry %}) · [Part 3]({% post_url 2026-10-05-robotics-ekf-sensor-fusion %}) · [Part 4]({% post_url 2026-10-22-robotics-lidar-slam-nav2 %})

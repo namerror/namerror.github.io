@@ -19,6 +19,27 @@ I began with the custom `/student/odom` topic and enabled only forward velocity 
 
 I also kept the problem planar with `two_d_mode: true` and disabled EKF TF publication. The controller already owned `odom -> base_link`; introducing a competing transform publisher would make the experiment harder to interpret.
 
+The input mask makes that choice explicit. Here is the relevant configuration excerpt; each group follows the state order shown in the comments:
+
+```yaml
+two_d_mode: true
+publish_tf: false
+odom0: /student/odom
+odom0_config: [false, false, false,  # x, y, z
+               false, false, false, # roll, pitch, yaw
+               true,  false, false, # vx, vy, vz
+               false, false, true,  # roll/pitch/yaw rates
+               false, false, false] # ax, ay, az
+imu0: /data/imu
+imu0_config: [false, false, false,
+              false, false, false,
+              false, false, false,
+              false, false, true,
+              false, false, false]
+```
+
+Only the selected variables influence the filter as measurements from those sources. Disabling wheel pose does not mean the filter stops estimating pose; it predicts and updates its state using the selected velocity measurements.
+
 This was configuration and integration of an existing filter implementation. My custom component was the wheel-odometry node, not the EKF algorithm itself.
 
 ## Covariance expresses confidence
@@ -61,7 +82,7 @@ One retained the tiny native variance. The other used `1.0 (rad/s)^2` as a delib
 
 That demonstrated how strongly an overconfident measurement can pull the estimate. It did not make `1.0` a calibrated sensor variance. Increasing uncertainty can suppress a biased input; it does not estimate or remove the bias.
 
-The [experiment report](https://github.com/namerror/Robot-starter/blob/734a42d/experiments/yaw_rate_fusion/report.md) records both the baseline and controlled-disagreement results.
+I kept the baseline and controlled-disagreement results separate: the first tests integration on native measurements, while the second tests how declared confidence changes the response to deliberately altered measurements.
 
 ## Noise and bias need different questions
 
@@ -83,4 +104,4 @@ What I gained from this phase was a more disciplined way to discuss localization
 
 ---
 
-[Project source and learning roadmap](https://github.com/namerror/Robot-starter) · [Part 1]({% post_url 2026-08-11-robotics-stack-model-to-motion %}) · [Part 2]({% post_url 2026-08-23-robotics-wheel-odometry %}) · **Part 3** · [Part 4]({% post_url 2026-10-22-robotics-lidar-slam-nav2 %})
+[Part 1]({% post_url 2026-08-11-robotics-stack-model-to-motion %}) · [Part 2]({% post_url 2026-08-23-robotics-wheel-odometry %}) · **Part 3** · [Part 4]({% post_url 2026-10-22-robotics-lidar-slam-nav2 %})

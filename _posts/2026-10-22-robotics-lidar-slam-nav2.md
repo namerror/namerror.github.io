@@ -35,9 +35,26 @@ That helped me distinguish a sensor limitation from missing geometry. Moving the
 
 It also made the difference between scan points and a map clearer. A scan is a set of observations from a sensor pose. An occupancy grid combines observations over space and time into estimates of free, occupied, and unknown cells.
 
+![Gazebo test room containing the mobile base, four walls, and two aligned boxes]({{ '/assets/img/robot-starter/gazebo-room.png' | relative_url }})
+
+*Newly reproduced Gazebo view of the test room. The near red box can hide the farther blue box from the robot's LiDAR. This capture uses a temporary OGRE rendering override because the default graphics path crashed; it is an illustration of the scene, not a new accuracy experiment.*
+
 ## Building the first occupancy grid
 
 I configured SLAM Toolbox to consume `/scan`, using the existing robot transforms and simulation time. A dedicated mapping launch composed it with the working simulation/control baseline.
+
+The essential SLAM configuration connects the sensor to the frame chain:
+
+```yaml
+odom_frame: odom
+map_frame: map
+base_frame: base_link
+scan_topic: /scan
+mode: mapping
+resolution: 0.05
+```
+
+These names have to agree with the transforms and scan messages actually being published. The resolution sets the grid cell size in meters; it does not guarantee map accuracy at that scale.
 
 The frame ownership was central:
 
@@ -48,6 +65,10 @@ The frame ownership was central:
 The EKF still had `publish_tf: false`. Although I had tested its filtered output in the previous phase, this mapping and navigation baseline continued to use controller odometry and its transform. Those are separate integration decisions.
 
 My first room map used **0.05 m per cell** and showed a 120-by-120-cell grid. In my notes I recorded sparse free/unknown patterns and an occluded wedge behind the near obstacle. A convincing outline in the raw scan does not mean every grid cell has accumulated enough evidence to be classified.
+
+![RViz showing orange laser returns, the robot, and a partially observed occupancy grid with a wedge of unknown space behind the near box]({{ '/assets/img/robot-starter/rviz-map.png' | relative_url }})
+
+*Newly captured from the same temporary visualization run: orange points are scan returns, and the grid contains free and unknown regions. The wedge behind the near box shows the visibility limit from this pose. This is a stationary mapping view, not the historical Nav2 goal run.*
 
 I also had to remember that `map` need not share Gazebo world's origin. Relative distances and wall spacing are more meaningful first checks than comparing raw absolute coordinates across unaligned frames. I did not record a complete numerical map-accuracy benchmark at this milestone.
 
@@ -70,7 +91,7 @@ Nav2 controller / behaviors
 
 Checking the final topic showed one publisher from the collision monitor and one controller subscriber. That verified the intended wiring through the safety stage. It does not by itself establish comprehensive obstacle-avoidance or safety performance.
 
-The [Nav2 bringup commit](https://github.com/namerror/Robot-starter/commit/193df32) contains the project configuration and launch integration.
+A dedicated launch file and project-owned configuration made this command path repeatable.
 
 ## A short goal exposed a configuration mismatch
 
@@ -88,7 +109,7 @@ The requested goal was `(0.5, 0.0)` in `map`. Nav2 reported `SUCCEEDED` with err
 
 Stopping roughly 0.15 m before the requested point was consistent with the configured goal tolerance. It would be misleading to call that exact arrival at 0.5 m.
 
-The [short-goal report](https://github.com/namerror/Robot-starter/blob/193df32/experiments/nav2_minimal_bringup/report.md) records the lifecycle, costmap, command-chain, and result checks.
+I recorded the lifecycle states, costmap publication, final command-topic connections, and action result alongside the final pose so that success meant more than seeing the robot move.
 
 This milestone demonstrates a repeatable mapping-and-navigation bringup and one successful short goal in the known test room. It does not yet establish autonomous exploration or performance across diverse environments.
 
@@ -96,4 +117,4 @@ Looking back across these four stages, the strongest progress has been learning 
 
 ---
 
-[Project source and learning roadmap](https://github.com/namerror/Robot-starter) · [Part 1]({% post_url 2026-08-11-robotics-stack-model-to-motion %}) · [Part 2]({% post_url 2026-08-23-robotics-wheel-odometry %}) · [Part 3]({% post_url 2026-10-05-robotics-ekf-sensor-fusion %}) · **Part 4**
+[Part 1]({% post_url 2026-08-11-robotics-stack-model-to-motion %}) · [Part 2]({% post_url 2026-08-23-robotics-wheel-odometry %}) · [Part 3]({% post_url 2026-10-05-robotics-ekf-sensor-fusion %}) · **Part 4**

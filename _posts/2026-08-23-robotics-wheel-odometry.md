@@ -40,7 +40,7 @@ pose.pose.position.y = last_odom_msg_->pose.pose.position.y
     + delta_s * sin(prev_yaw + delta_theta / 2);
 ```
 
-This excerpt comes from my [odometry implementation at the phase-2 hardening commit](https://github.com/namerror/Robot-starter/blob/a620d01/ros2_ws/src/robot_core/src/odom.cpp). The node also updates the orientation quaternion and divides distance and heading increments by elapsed time to estimate forward velocity and yaw rate.
+This excerpt comes from the version of my odometry node used for this milestone. The node also updates the orientation quaternion and divides distance and heading increments by elapsed time to estimate forward velocity and yaw rate.
 
 The midpoint method is a small-step approximation. It is useful here because the joint-state stream gives frequent updates; it is not a claim that discrete integration eliminates odometry error.
 
@@ -80,7 +80,7 @@ This is a policy for the repeated-stamp failure I observed. A full simulation re
 
 In the subsequent slow arc, the student stream had valid frames throughout and no default/reset messages. Against controller odometry, the position RMSE was **1.74 micrometers**, with a final position difference of **2.45 micrometers**.
 
-Those tiny values belong to this ideal-simulation consistency check. The [recorded experiments and analysis](https://github.com/namerror/Robot-starter/blob/8db53dc/experiments/diff_drive_odometry/report.md) explain the inputs, timestamp alignment, failed recording, and corrected recording.
+Those tiny values belong to this ideal-simulation consistency check. I kept the failed and corrected recordings so I could compare timestamp alignment and state continuity, rather than relying on a visual impression of the trajectory.
 
 There is another limit to the evidence: the follow-up recording did not itself contain non-positive timestamp transitions. It showed that normal operation remained continuous after the fix; the callback inspection explains why the old default-message publication path was removed.
 
@@ -100,4 +100,4 @@ The next step was to stop treating every estimate as equally trustworthy. Even a
 
 ---
 
-[Project source and learning roadmap](https://github.com/namerror/Robot-starter) · [Part 1]({% post_url 2026-08-11-robotics-stack-model-to-motion %}) · **Part 2** · [Part 3]({% post_url 2026-10-05-robotics-ekf-sensor-fusion %}) · [Part 4]({% post_url 2026-10-22-robotics-lidar-slam-nav2 %})
+[Part 1]({% post_url 2026-08-11-robotics-stack-model-to-motion %}) · **Part 2** · [Part 3]({% post_url 2026-10-05-robotics-ekf-sensor-fusion %}) · [Part 4]({% post_url 2026-10-22-robotics-lidar-slam-nav2 %})
